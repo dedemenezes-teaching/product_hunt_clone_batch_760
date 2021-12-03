@@ -1,17 +1,17 @@
 require "application_system_test_case"
 
 class ProductsTest < ApplicationSystemTestCase
-  # test "visiting the index" do
-  #   visit root_url # "/" # Capybara visiting
-  #   # save_and_open_screenshot
+  test "visiting the index" do
+    visit root_url # "/" # Capybara visiting
+    # save_and_open_screenshot
 
-  #   assert_selector "h1", text: "Awesome Products"
-  # end
+    assert_selector "h1", text: "Awesome Products"
+  end
 
-  # test "same amount of cards as products" do
-  #   visit root_url
-  #   assert_selector ".card-product", count: Product.count
-  # end
+  test "same amount of cards as products" do
+    visit root_url
+    assert_selector ".card-product", count: Product.count
+  end
 
   test "lets a signed in user create a new product" do
     login_as users(:jeff) # Capybara
